@@ -4,7 +4,7 @@ public class Account {
     private String cardId;
     private String userName;
     private char sex;
-    private String password;
+    private String passWord;
     private double money;
     private double limit;
 
@@ -16,7 +16,7 @@ public class Account {
      }
 
      public String getUserName(){
-        return userName + (sex == '男' ? "先生" : '女');
+        return userName + (sex == '男' ? "先生" : "女士");
      }
 
      public void setUserName(String userName){
@@ -31,12 +31,28 @@ public class Account {
         this.sex = sex;
      }
 
-     public void setPassWord(String password){
-        this.password = password;
+     public String getPassWord(){
+        return passWord;
      }
 
-     public void setLimit(double limti){
+     public void setPassWord(String passWord){
+        this.passWord = passWord;
+     }
+
+     public Double getLimit(){
+        return limit;
+     }
+
+     public void setLimit(double limit){
         this.limit = limit;
+     }
+
+     public double getMoney(){
+        return money;
+     }
+
+     public void setMoney(double money){
+        this.money = money;
      }
 
 }
